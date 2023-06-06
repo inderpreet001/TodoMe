@@ -53,9 +53,9 @@ export default function Home() {
 
         {todo != []
           ? todo.map((item, index) => (
-              <Stack gap={4} direction="horizontal">
+              <Stack gap={4} direction="horizontal" key={item.text+`-`+index}>
                 {item.completed ? (
-                  <div className="d-flex justify-content-between todo-item mb-2 align-items-center" key={item.text+`-`+index}>
+                  <div className="d-flex justify-content-between todo-item mb-2 align-items-center" >
                     <div className="d-flex flex-column">
                     <strike><b>{item.text}</b></strike>
                     <span style={{fontSize:"11px"}}>{item.createdOn}</span>
@@ -69,7 +69,7 @@ export default function Home() {
                     />
                   </div>
                 ) : (
-                  <div className="d-flex justify-content-between todo-item mb-2 align-items-center" key={item.text+`-`+index}>
+                  <div className="d-flex justify-content-between todo-item mb-2 align-items-center">
                     <div className="d-flex flex-column">
                     <span><b>{item.text}</b></span>
                     <span style={{fontSize:"11px"}}>{item.createdOn}</span>
