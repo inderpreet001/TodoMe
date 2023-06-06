@@ -87,12 +87,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
 
 a {
@@ -104,4 +99,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.todo-item{
+ 
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  width: 600px !important;
+  padding: 10px !important;
+  word-wrap: break-word !important;
+  background-color: #dadada !important;
+  min-height: 100px !important;
+}
+
+.todo-item > span, strike{
+  width:500px !important;
+  word-wrap: break-word !important;
 }
